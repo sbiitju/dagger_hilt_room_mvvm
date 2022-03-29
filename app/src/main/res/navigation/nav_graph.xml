@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addNoteFragment3">
+
+    <fragment
+        android:id="@+id/addNoteFragment3"
+        android:name="com.shahinbasahr.room.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" />
+    <fragment
+        android:id="@+id/showNoteFragment"
+        android:name="com.shahinbasahr.room.ShowNoteFragment"
+        android:label="fragment_show_note"
+        tools:layout="@layout/fragment_show_note" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.shahinbasahr.room.ui.fragment.main.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_showNoteFragment"
+            app:destination="@id/showNoteFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addNoteFragment3"
+            app:destination="@id/addNoteFragment3" />
+    </fragment>
+</navigation>
